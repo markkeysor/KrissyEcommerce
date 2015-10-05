@@ -1,3 +1,10 @@
+Parse.initialize("ao6B2tpslDU3YPenUsg9W2A5TZEQWRBKUs88Heva", "PgLtI13ZIE7hNTyoxICj6Iljqxt7QK9trLWeGs1l");
+
+var TestObject = Parse.Object.extend("TestObject");
+var testObject = new TestObject();
+testObject.save({foo: "bar"}).then(function(object) {
+alert("yay! it worked");
+});
 var app = angular.module('krissy', ['ui.router']);
 
 app.config(function($stateProvider, $urlRouterProvider){
@@ -7,7 +14,7 @@ app.config(function($stateProvider, $urlRouterProvider){
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: '',
+      templateUrl: 'app/home/templates/homeTmpl.html',
       controller: 'homeCtrl'
     })
 
@@ -28,5 +35,7 @@ app.config(function($stateProvider, $urlRouterProvider){
       templateUrl: 'app/contact/templates/contactTmpl.html',
       controller: 'contactCtrl'
     })
+
+
 
 });
