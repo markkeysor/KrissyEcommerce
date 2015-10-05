@@ -1,4 +1,4 @@
-var app = angular.module('krissy', [ui.router]);
+var app = angular.module('krissy', ['ui.router']);
 
 app.config(function($stateProvider, $urlRouterProvider){
 
@@ -7,7 +7,7 @@ app.config(function($stateProvider, $urlRouterProvider){
   $stateProvider
     .state('home', {
       url: '/',
-      templateUrl: 'app/home/templates/homeTmpl.html',
+      templateUrl: '',
       controller: 'homeCtrl'
     })
 
